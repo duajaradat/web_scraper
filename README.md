@@ -8,8 +8,8 @@ Du'a Jaradat
 
 ## Links and Resources
 
-- [Linear-Regression-Code]()
-- [Pull Request]()
+- [Web Scraping Code](https://github.com/duajaradat/web_scraper/blob/scraper/web_scraper/scraper.ipynb)
+- [Pull Request](https://github.com/duajaradat/web_scraper/pull/1)
 
 ---
 ## Overview
@@ -37,8 +37,10 @@ Code up a web scraper that can automate the process of manually using the site.
 
 - Report function must be named get_citations_needed_report
      - get_citations_needed_report takes in a url and returns a string
-     
+
      - the string should be formatted with each citation needed on own line, in order found.
+
+---     
 
 ## User Acceptance Tests
 
@@ -53,7 +55,7 @@ Code up a web scraper that can automate the process of manually using the site.
 - Poetry
 - BeautifullSoap
 - Requests
-- Jupyterlab
+
 
 
 ---
@@ -67,4 +69,3 @@ Code up a web scraper that can automate the process of manually using the site.
 
 
 
----

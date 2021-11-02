@@ -12,6 +12,8 @@ Du'a Jaradat
 - [Pull Request](https://github.com/duajaradat/web_scraper/pull/1)
 
 ---
+
+
 ## Overview
 
 Code up a web scraper that can automate the process of manually using the site.

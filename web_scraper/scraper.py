@@ -1,6 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 
+url='https://en.wikipedia.org/wiki/History_of_Mexico'
+response = requests.get(url)
+soup = BeautifulSoup(response.content,'html.parser')
+
 def get_citations_needed_count(soup):
     citation_needed=soup.find_all('a', {'title': 'Wikipedia:Citation needed'})
     return len(citation_needed)

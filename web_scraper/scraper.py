@@ -1,27 +1,17 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "interpreter": {
-   "hash": "000f8d60a6afd19b68f436ed4640d40f5cb6716170b2bd645832759d075f8f46"
-  },
-  "kernelspec": {
-   "display_name": "Python 3.9.5 64-bit ('.venv': poetry)",
-   "name": "python3"
-  },
-  "language_info": {
-   "name": "python",
-   "version": "3.9.5"
-  },
-  "orig_nbformat": 4
- },
- "nbformat": 4,
- "nbformat_minor": 2
-}
+import requests
+from bs4 import BeautifulSoup
+
+def get_citations_needed_count(soup):
+    citation_needed=soup.find_all('a', {'title': 'Wikipedia:Citation needed'})
+    return len(citation_needed)
+
+
+def get_citations_needed_report(soup):
+    paragraphs=soup.find_all('p')
+
+    all_paragraphs=[]
+    for paragraph in paragraphs:
+        paragraph_citation_needed = paragraph.find('a',{'title':'Wikipedia:Citation needed'})
+        if paragraph_citation_needed :
+            all_paragraphs.append(paragraph.text)
+    return all_paragraphs

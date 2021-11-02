@@ -8,7 +8,7 @@ Du'a Jaradat
 
 ## Links and Resources
 
-- [Web Scraping Code]https://github.com/duajaradat/web_scraper/blob/scraper/web_scraper/scraper.py)
+- [Web Scraping Code](https://github.com/duajaradat/web_scraper/blob/scraper/web_scraper/scraper.py)
 - [Pull Request](https://github.com/duajaradat/web_scraper/pull/1)
 
 ---

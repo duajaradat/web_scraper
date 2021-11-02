@@ -14,11 +14,21 @@ soup = BeautifulSoup(response.content,'html.parser')
 
 
 def get_citations_needed_count(soup):
+    """ 
+    This function search for all the links have title (Wikipedia:Citation needed) to count them
+    Arguments : response text (soup)
+    Returns : number of links have title name (Wikipedia:Citation needed)
+    """
     citation_needed=soup.find_all('a', {'title': 'Wikipedia:Citation needed'})
     return len(citation_needed)
 
 
 def get_citations_needed_report(soup):
+    """
+
+
+    """
+
     paragraphs=soup.find_all('p')
 
     all_paragraphs=[]
@@ -27,3 +37,9 @@ def get_citations_needed_report(soup):
         if paragraph_citation_needed :
             all_paragraphs.append(paragraph.text)
     return all_paragraphs
+
+if __name__ == '__main__':
+
+    # print(get_citations_needed_count(soup))   
+    # print(get_citations_needed_report(soup))
+    pass
